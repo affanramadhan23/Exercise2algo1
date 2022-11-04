@@ -74,5 +74,36 @@ namespace Alorithm_lowhigh
 
             } while ((ch == 'y') || (ch == 'Y'));
         }
+        static void Main(String[] args)
+        {
+            program myList = new program();
+            int pilihanmenu;
+            char ch;
+
+            Console.WriteLine("Menu Option");
+            Console.WriteLine("===============");
+            Console.WriteLine("1.Linear Search");
+            Console.WriteLine("2.Binary search");
+            Console.WriteLine("3.Exit");
+            Console.WriteLine("Enter your choice (1,2,3) : ");
+            pilihanmenu = Convert.ToInt32(Console.ReadLine());
+            switch (pilihanmenu)
+            {
+                case 1:
+                    Console.WriteLine("");
+                    Console.WriteLine("-------------");
+                    Console.WriteLine("Binary search");
+                    Console.WriteLine("-------------");
+                    myList.input();
+                    myList.BinarySearch();
+                    break;
+                case 2:
+                    Console.WriteLine("exit.");
+                    break;
+                default:
+                    Console.WriteLine("error");
+                    break;
+            }
+        }
     }
 }
